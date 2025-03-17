@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <title>First Birthday Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="invitation-card">
+            <h1>You're Invited!</h1>
+            <div class="birthday-details">
+                <h2>Join us in celebrating</h2>
+                <h3>Ianna's 1st Birthday</h3>
+                <p class="date">Date: April 13, 2025 (Sunday)</p>
+                <p class="time">Time: 1pm-3pm</p>
+                <p class="venue">Venue: Jollibee Epza</p>
+            </div>
+
+            <div class="rsvp-form">
+                <h3>Please RSVP</h3>
+                <form id="rsvpForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required autocomplete="off">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Will you attend?</label>
+                        <div class="attendance-options">
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="yes"> Yes, I'll be there!
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="no"> Sorry, I can't make it
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Wrap the rest of the form in a div that we can show/hide -->
+                    <div id="additional-details" style="display: none;">
+                        <div class="form-group">
+                            <label for="guests">Number of Guests (max of 5 <strong>accompany</strong> and include
+                                <strong>kids</strong> that will be
+                                having meal):</label>
+                            <input type="number" id="guests" min="1" max="5" required>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message (Optional):</label>
+                        <textarea id="message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Response</button>
+                </form>
+            </div>
+            <div class="map-container">
+                <h3>Location Map</h3>
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3864.3510704270934!2d120.8565066103165!3d14.40691448173189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33962d57ef4f6799%3A0x759c0cc448f2e114!2sJollibee!5e0!3m2!1sen!2sph!4v1742189651387!5m2!1sen!2sph"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
