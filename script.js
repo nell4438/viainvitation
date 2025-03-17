@@ -75,7 +75,8 @@ rsvpForm.addEventListener("submit", async (e) => {
   const formData = {
     name: document.getElementById("name").value.trim(),
     attendance: attendance,
-    guests: parseInt(document.getElementById("guests").value),
+    guestsAdult: parseInt(document.getElementById("guestsAdult").value),
+    guestsKids: parseInt(document.getElementById("guestsKids").value),
     message: document.getElementById("message").value.trim(),
     submitted_at: new Date().toISOString(),
   };
@@ -132,4 +133,21 @@ messageTextarea.addEventListener("input", (e) => {
   if (e.target.value.length > maxLength) {
     e.target.value = e.target.value.substring(0, maxLength);
   }
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const card = document.querySelector('.invitation-card');
+
+  function createSparkle() {
+    const sparkle = document.createElement('div');
+    sparkle.className = 'sparkle';
+    sparkle.style.left = Math.random() * 100 + '%';
+    sparkle.style.top = Math.random() * 100 + '%';
+    card.appendChild(sparkle);
+
+    setTimeout(() => sparkle.remove(), 1500);
+  }
+
+  setInterval(createSparkle, 300);
 });
