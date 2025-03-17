@@ -62,7 +62,7 @@ function validateForm(formData) {
     throw new Error("Please indicate whether you will attend");
   }
 
-  if (formData.attendance === 'yes' && (!formData.guests || formData.guests < 1 || formData.guests > 5)) {
+  if (formData.attendance === 'yes' && !formData.guestsAdult && !formData.guestsKids) {
     throw new Error("Please enter a valid number of guests (1-5)");
   }
 }
